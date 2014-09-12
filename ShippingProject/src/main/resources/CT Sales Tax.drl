@@ -8,7 +8,7 @@ when
 	$shippingObject : ShippingObject (customerAddress.state == "CT")
 
 then
-	modify ($shippingObject.orderDetails) {
+	modify ($shippingObject.getorderDetails()) {
 		setorderprice(203));
 	}
 end
