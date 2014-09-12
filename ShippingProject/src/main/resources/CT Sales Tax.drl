@@ -9,6 +9,6 @@ when
 
 then
 	modify ($shippingObject) {
-		setApprovalRequired(true);
+		setorderDetails(setorderprice(203));
 	}
 end
