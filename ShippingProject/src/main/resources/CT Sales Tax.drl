@@ -8,6 +8,6 @@ when
 
 then
 	modify ($shippingObject.getOrderDetails()) {
-		setOrderPrice(203);
+		setOrderPrice((double)203);
 	}
 end
