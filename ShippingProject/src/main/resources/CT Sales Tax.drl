@@ -9,6 +9,6 @@ when
 
 then
 	modify ($shippingObject.getOrderDetails()) {
-		setOrderPrice(203.00);
+		setOrderPrice(new BigDecimal(203.00));
 	}
 end
