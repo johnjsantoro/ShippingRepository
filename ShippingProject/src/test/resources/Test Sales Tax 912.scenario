@@ -3,14 +3,7 @@
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
   <fixtures>
-    <org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
-      <name></name>
-    </org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
     <execution-trace/>
-    <expect-rule>
-      <ruleName>CT Sales Tax</ruleName>
-      <expectedFire>true</expectedFire>
-    </expect-rule>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
@@ -19,6 +12,12 @@
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
         <type>com.ibm.cpo.projects.shippingproject.ShippingObject</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.ibm.cpo.projects.shippingproject.OrderInfo</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>com.ibm.cpo.projects.shippingproject.ShippingAddress</type>
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
