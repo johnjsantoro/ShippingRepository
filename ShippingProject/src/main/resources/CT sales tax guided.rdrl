@@ -1,7 +1,14 @@
 import java.lang.Number;
+import com.ibm.cpo.projects.shippingproject.ShippingAddress;
+import com.ibm.cpo.projects.shippingproject.OrderInfo;
+import com.ibm.cpo.projects.shippingproject.ShippingObject;
 
-rule "CT sales tax guided"
+rule "CT sales tax guided" extends "CT Sales Tax"
 	dialect "mvel"
 	when
+		ShippingAddress( state == "CT" )
 	then
+		OrderInfo fact0 = new OrderInfo();
+		fact0.setOrderPrice( = 200 );
+		insert( fact0 );
 end
