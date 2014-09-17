@@ -1,0 +1,26 @@
+import com.ibm.cpo.lunchandlearns.rules
+
+
+rule "basic rules" ruleflow-group "Approaches to JBoss"
+no-loop
+
+when
+	$salesOpp: SalesOpportunity(customerNeeds = "Basic Rules")
+
+then
+	modify ($salesOpp) {
+		setProductFocus("IBM BPM Standard");
+	}
+end
+
+rule "enterprise rules" ruleflow-group "Approaches to JBoss"
+no-loop
+
+when
+	$salesOpp: SalesOpportunity(customerNeeds = "Enterprise Rules")
+
+then
+	modify ($salesOpp) {
+		setProductFocus("IBM ODM");
+	}
+end
