@@ -40,14 +40,14 @@
     <expect-fact>
       <fieldValues>
         <expect-field>
-          <fieldName>orderPrice</fieldName>
-          <expected>209</expected>
+          <fieldName>orderDetails</fieldName>
+          <expected>201</expected>
           <operator>==</operator>
           <nature>0</nature>
         </expect-field>
       </fieldValues>
-      <name>OrderInfo</name>
-      <anonymous>true</anonymous>
+      <name>myShippingObject</name>
+      <anonymous>false</anonymous>
     </expect-fact>
   </fixtures>
   <rules/>
