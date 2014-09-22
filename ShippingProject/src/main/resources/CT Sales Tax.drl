@@ -4,8 +4,8 @@ rule "CT Sales Tax" ruleflow-group "Calculate Shipping Tax"
 no-loop
 
 when
-	$shippingObject : ShippingObject (customerAddress.state == "CT")
-	$orderInfo : $shippingObject.getOrderDetails()
+	$shippingObject : ShippingObject (customerAddress.state == "CT");
+	$orderInfo : $shippingObject.getOrderDetails();
 
 then
 	modify ($orderInfo) {
