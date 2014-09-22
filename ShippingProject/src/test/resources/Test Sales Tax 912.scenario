@@ -40,18 +40,6 @@
     <expect-fact>
       <fieldValues>
         <expect-field>
-          <fieldName>orderPrice</fieldName>
-          <expected>205.</expected>
-          <operator>==</operator>
-          <nature>1</nature>
-        </expect-field>
-      </fieldValues>
-      <name>OrderInfo</name>
-      <anonymous>true</anonymous>
-    </expect-fact>
-    <expect-fact>
-      <fieldValues>
-        <expect-field>
           <fieldName>orderDetails</fieldName>
           <expected></expected>
           <operator>==</operator>
