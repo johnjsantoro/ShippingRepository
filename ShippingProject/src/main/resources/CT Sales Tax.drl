@@ -5,10 +5,9 @@ no-loop
 
 when
 	$shippingObject : ShippingObject (customerAddress.state == "CT");
-	$orderInfo : $shippingObject.getOrderDetails();
 
 then
-	modify ($orderInfo) {
-		setOrderPrice($orderInfo.getPrice() * 1.05);
+	modify ($shippingObject.getOrderDetails()) {
+		setOrderPrice($shippingObject.getOrderDetails().getPrice() * 1.05);
 	}
 end
