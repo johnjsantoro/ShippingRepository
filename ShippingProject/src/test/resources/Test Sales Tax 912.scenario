@@ -38,16 +38,21 @@
     </fact-data>
     <execution-trace/>
     <expect-fact>
+      <fieldValues/>
+      <name>myShippingObject</name>
+      <anonymous>false</anonymous>
+    </expect-fact>
+    <expect-fact>
       <fieldValues>
         <expect-field>
-          <fieldName>orderDetails</fieldName>
-          <expected>201</expected>
+          <fieldName>orderPrice</fieldName>
+          <expected>505.</expected>
           <operator>==</operator>
           <nature>0</nature>
         </expect-field>
       </fieldValues>
-      <name>myShippingObject</name>
-      <anonymous>false</anonymous>
+      <name>OrderInfo</name>
+      <anonymous>true</anonymous>
     </expect-fact>
   </fixtures>
   <rules/>
