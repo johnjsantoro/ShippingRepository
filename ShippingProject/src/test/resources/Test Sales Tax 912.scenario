@@ -37,6 +37,18 @@
       <isModify>false</isModify>
     </fact-data>
     <execution-trace/>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>orderPrice</fieldName>
+          <expected>205.</expected>
+          <operator>==</operator>
+          <nature>0</nature>
+        </expect-field>
+      </fieldValues>
+      <name>OrderInfo</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
