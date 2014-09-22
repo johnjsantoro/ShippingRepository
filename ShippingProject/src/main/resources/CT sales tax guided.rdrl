@@ -8,7 +8,7 @@ rule "CT sales tax guided" extends "CT Sales Tax"
 	when
 		ShippingAddress( state == "CT" )
 	then
-		OrderInfo fact0 = new OrderInfo();
-		fact0.setOrderPrice( 200 );
+		ShippingAddress fact0 = new ShippingAddress();
+		fact0.setCity( "Hartford" );
 		insert( fact0 );
 end
