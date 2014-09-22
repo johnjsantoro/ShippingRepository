@@ -3,7 +3,52 @@
   <maxRuleFirings>100000</maxRuleFirings>
   <globals/>
   <fixtures>
+    <fact-data>
+      <type>ShippingObject</type>
+      <fieldData>
+        <field-data>
+          <fieldName>customerAddress</fieldName>
+          <fact>
+            <type>ShippingAddress</type>
+            <fieldData>
+              <field-data>
+                <name>state</name>
+                <value>CT</value>
+                <nature>1</nature>
+              </field-data>
+            </fieldData>
+          </fact>
+        </field-data>
+        <field-data>
+          <fieldName>orderDetails</fieldName>
+          <fact>
+            <type>OrderInfo</type>
+            <fieldData>
+              <field-data>
+                <name>orderPrice</name>
+                <value>200</value>
+                <nature>1</nature>
+              </field-data>
+            </fieldData>
+          </fact>
+        </field-data>
+      </fieldData>
+      <name>myShippingObject</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>orderPrice</fieldName>
+          <expected>209</expected>
+          <operator>==</operator>
+          <nature>0</nature>
+        </expect-field>
+      </fieldValues>
+      <name>OrderInfo</name>
+      <anonymous>true</anonymous>
+    </expect-fact>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
