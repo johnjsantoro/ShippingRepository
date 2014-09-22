@@ -13,7 +13,7 @@
             <fieldData>
               <field-data>
                 <name>state</name>
-                <value>Ct</value>
+                <value>CT</value>
                 <nature>1</nature>
               </field-data>
             </fieldData>
@@ -36,24 +36,34 @@
       <name>myObject</name>
       <isModify>false</isModify>
     </fact-data>
+    <fact-data>
+      <type>ShippingAddress</type>
+      <fieldData>
+        <field-data>
+          <name>state</name>
+          <value>CT</value>
+          <nature>1</nature>
+        </field-data>
+      </fieldData>
+      <name>justAddress</name>
+      <isModify>false</isModify>
+    </fact-data>
     <execution-trace/>
+    <expect-rule>
+      <ruleName>CT sales tax guided</ruleName>
+      <expectedFire>true</expectedFire>
+    </expect-rule>
     <expect-fact>
       <fieldValues>
         <expect-field>
-          <fieldName>orderDetails</fieldName>
-          <expected></expected>
+          <fieldName>city</fieldName>
+          <expected>Deerfield</expected>
           <operator>==</operator>
-          <nature>0</nature>
-        </expect-field>
-        <expect-field>
-          <fieldName>customerAddress</fieldName>
-          <expected></expected>
-          <operator>==</operator>
-          <nature>0</nature>
+          <nature>1</nature>
         </expect-field>
       </fieldValues>
-      <name>myObject</name>
-      <anonymous>false</anonymous>
+      <name>ShippingAddress</name>
+      <anonymous>true</anonymous>
     </expect-fact>
   </fixtures>
   <rules/>
