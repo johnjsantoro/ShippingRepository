@@ -8,6 +8,6 @@ when
 
 then
 	modify ($shippingObject.getOrderDetails()) {
-		setOrderPrice($shippingObject.getOrderDetails().getPrice() * 1.05);
+		setOrderPrice($shippingObject.getOrderDetails().getOrderPrice() * 1.05);
 	}
 end
