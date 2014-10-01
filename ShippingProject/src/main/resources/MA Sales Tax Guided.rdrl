@@ -7,9 +7,9 @@ rule "MA Sales Tax Guided"
 	dialect "mvel"
 	when
 		ShippingObject( customerAddress != null , customerAddress.state == "MA" )
-		ShippingObject( ruleOrderDetails : orderDetails != null )
+		ShippingObject( ruleOrderDetails : orderDetails != null , ruleOrderPrice : orderDetails.orderPrice != null )
 	then
 		insert( new ShippingObject() );
-		ruleOrderDetails.setOrderPrice( 1 * 1.04 );
+		ruleOrderDetails.setOrderPrice( ruleOrderPrice * 1.04 );
 		update( ruleOrderDetails );
 end
