@@ -4,7 +4,7 @@ import com.ibm.cpo.projects.shippingproject.AllinOneShipping;
 rule "MA all Sales Tax Guided"
 	dialect "mvel"
 	when
-		ruleShipping : AllinOneShipping( state matches "MA" , ruleOrderPrice : orderPrice != null )
+		ruleShipping : AllinOneShipping( state matches "MAall" , ruleOrderPrice : orderPrice != null )
 	then
 		ruleShipping.setOrderPrice( 617B );
 end
