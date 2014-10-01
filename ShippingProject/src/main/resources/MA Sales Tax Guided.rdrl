@@ -6,7 +6,7 @@ import com.ibm.cpo.projects.shippingproject.OrderInfo;
 rule "MA Sales Tax Guided"
 	dialect "mvel"
 	when
-		ruleShippingObject : ShippingObject( customerAddress != null , customerAddress.state == "MASS" , ruleOrderDetails : orderDetails != null , ruleOrderPrice : orderDetails.orderPrice != null )
+		ruleShippingObject : ShippingObject( customerAddress != null , customerAddress.state == "MAall" , ruleOrderDetails : orderDetails != null , ruleOrderPrice : orderDetails.orderPrice != null )
 	then
 		ruleOrderDetails.setOrderPrice( ruleOrderPrice * 1.04 );
 end
