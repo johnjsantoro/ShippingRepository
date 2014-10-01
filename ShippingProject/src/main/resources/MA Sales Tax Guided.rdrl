@@ -9,7 +9,4 @@ rule "MA Sales Tax Guided"
 		ruleShippingObject : ShippingObject( customerAddress != null , customerAddress.state == "MASS" , ruleOrderDetails : orderDetails != null , ruleOrderPrice : orderDetails.orderPrice != null )
 	then
 		ruleOrderDetails.setOrderPrice( ruleOrderPrice * 1.04 );
-		update( ruleOrderDetails );
-		ruleShippingObject.setOrderDetails( ruleOrderDetails );
-		update( ruleShippingObject );
 end
