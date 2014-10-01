@@ -10,6 +10,6 @@ rule "MA Sales Tax Guided"
 		ShippingObject( ruleOrderDetails : orderDetails != null )
 	then
 		insert( new ShippingObject() );
-		ruleOrderDetails.setOrderPrice( orderPrice * 1.04 );
+		ruleOrderDetails.setOrderPrice( 1 * 1.04 );
 		update( ruleOrderDetails );
 end
