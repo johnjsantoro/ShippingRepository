@@ -41,18 +41,6 @@
       <ruleName>MA Sales Tax Guided</ruleName>
       <expectedFire>true</expectedFire>
     </expect-rule>
-    <expect-fact>
-      <fieldValues>
-        <expect-field>
-          <fieldName>orderDetails</fieldName>
-          <expected></expected>
-          <operator>==</operator>
-          <nature>0</nature>
-        </expect-field>
-      </fieldValues>
-      <name>testShippingObject</name>
-      <anonymous>false</anonymous>
-    </expect-fact>
   </fixtures>
   <rules/>
   <inclusive>false</inclusive>
