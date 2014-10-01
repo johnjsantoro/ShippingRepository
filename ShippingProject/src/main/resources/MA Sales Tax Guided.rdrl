@@ -6,7 +6,7 @@ import com.ibm.cpo.projects.shippingproject.OrderInfo;
 rule "MA Sales Tax Guided"
 	dialect "mvel"
 	when
-		ShippingObject( state == "MA" )
+		ShippingObject( customerAddress.state == "MA" )
 		ShippingObject( ruleOrderDetails : orderDetails != null )
 	then
 		insert( new ShippingObject() );
