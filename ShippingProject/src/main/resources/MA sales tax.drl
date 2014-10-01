@@ -1,0 +1,13 @@
+import com.ibm.cpo.projects.shippingproject.ShippingObject
+
+rule "MA Sales Tax" ruleflow-group "Calculate Shipping Tax"
+no-loop
+
+when
+	$shippingObject : ShippingObject (customerAddress.state == "MA");
+
+then
+	modify ($shippingObject.getOrderDetails()) {
+		setOrderPrice($shippingObject.getOrderDetails().getOrderPrice() * 1.04);
+	}
+end
