@@ -6,5 +6,5 @@ rule "MA all Sales Tax Guided"
 	when
 		ruleShipping : AllinOneShipping( state matches "MAall" , ruleOrderPrice : orderPrice != null )
 	then
-		ruleShipping.setOrderPrice( new BigDecimal(ruleOrderPrice * 1.04) );
+		ruleShipping.setOrderPrice( ruleOrderPrice * 1.04 );
 end
