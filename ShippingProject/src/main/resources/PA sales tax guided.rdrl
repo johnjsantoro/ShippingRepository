@@ -1,0 +1,7 @@
+import java.lang.Number;
+
+rule "PA sales tax guided"
+	dialect "mvel"
+	when
+	then
+end
